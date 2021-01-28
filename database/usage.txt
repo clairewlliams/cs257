@@ -1,0 +1,9 @@
+--help, -h Prints the usage statement.
+
+--list-athletes noc -a noc Lists the names of athletes from a given NOC
+
+--list-medals -m Lists NOCs in decreasing order by number of gold medals they have won
+
+--limit limit -l limit Limits results to a given limit 
+
+--i'll decide later :)
