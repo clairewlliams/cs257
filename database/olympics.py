@@ -12,7 +12,7 @@ def get_parsed_arguments():
     '''
     parser = argparse.ArgumentParser(description='Queries olympics database')
     parser.add_argument('--athletes', '-a', nargs=1, metavar='NOC', help='Lists the names of athletes from a given NOC')
-    parser.add_argument('--medals', '-m', help='Lists NOCs in decreasing order by number of gold medals they have won')
+    parser.add_argument('--medals', '-m', action="store_true", help='Lists NOCs in decreasing order by number of gold medals they have won')
     parser.add_argument('--limit', '-l', nargs=1, metavar='limit', type=int, help='Limits results to a given limit')
     parsed_arguments = parser.parse_args()
     return parsed_arguments
@@ -52,7 +52,28 @@ def list_medals(limit, cursor):
     '''
     Prints NOCs in decreasing order by number of gold medals won
     '''
-    return 
+    query = '''SELECT nations.NOC, COUNT(contests_medals.medal)
+            FROM nations, athletes_games, contests_medals
+            WHERE contests_medals.medal = 'Gold'
+            AND contests_medals.athletes_games_id = athletes_games.id
+            AND athletes_games.nation_id = nations.id
+            GROUP BY nations.NOC         
+            ORDER BY COUNT (contests_medals.medal) DESC
+            '''
+    if limit > 0:
+        query += ''' LIMIT ''' + str(limit) + ''';'''
+    else:
+        query += ''';'''
+    try:
+        cursor.execute(query, ())
+    except Exception as e:
+        print(e)
+        exit()
+
+    print('===== NOCs in decreasing order by gold medal count =====')
+    for row in cursor:
+        print(row[0] + " | " + str(row[1]))
+    print()
 
 def main():
     arguments = get_parsed_arguments()
