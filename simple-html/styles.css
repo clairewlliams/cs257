@@ -10,8 +10,8 @@ body {
 	width: 100%;
 	float: left;
 	font-size: 48pt;
-	background-color: Lavender;
-	color: SlateGray;
+	background-color: Indigo;
+	color: Plum;
 	text-align: center;
 	padding-bottom: 50px;
 }
@@ -21,8 +21,8 @@ body {
 	width: 20%;
 	float: left;
 	font-size: 24pt;
-	background-color: LavenderBlush;
-	color: SlateGray;
+	background-color: Plum;
+	color: Indigo;
 	text-align: center;
 }
 
@@ -31,8 +31,8 @@ body {
         width: 80%;
         float: left;
         font-size: 24pt;
-        background-color: LemonChiffon;
-        color: SlateGray;
+        background-image: url("background.gif");
+	backgound-size: cover;
 	vertical-align: middle;
 }
 
