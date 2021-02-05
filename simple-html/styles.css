@@ -1,0 +1,50 @@
+/* Claire Williams */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#top {
+	height: 20vh;
+	width: 100%;
+	float: left;
+	font-size: 48pt;
+	background-color: Lavender;
+	color: SlateGray;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+#left {
+	height: 80vh;
+	width: 20%;
+	float: left;
+	font-size: 24pt;
+	background-color: LavenderBlush;
+	color: SlateGray;
+	text-align: center;
+}
+
+#right {
+        height: 80vh;
+        width: 80%;
+        float: left;
+        font-size: 24pt;
+        background-color: LemonChiffon;
+        color: SlateGray;
+	vertical-align: middle;
+}
+
+button {
+	display: block;
+	border: 1px solid SlateGray;
+	color: SlateGray;
+ 	padding: 15px 32px;
+ 	text-align: center;
+  	font-size: 24pt;
+  	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+}

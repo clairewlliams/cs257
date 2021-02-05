@@ -1,9 +1,11 @@
---help, -h Prints the usage statement.
+Queries olympics database
 
---list-athletes noc -a noc Lists the names of athletes from a given NOC
+optional arguments:
+  -h, --help                show this help message and exit
+  --athletes NOC, -a NOC    Lists the names of athletes from a given NOC
+  --medals, -m              Lists NOCs in decreasing order by number of gold
+                            medals they have won
+  --name name, -n name      Lists the medals won by a given athlete
+  --limit limit, -l limit   Limits results to a given limit
 
---list-medals -m Lists NOCs in decreasing order by number of gold medals they have won
-
---limit limit -l limit Limits results to a given limit 
-
---i'll decide later :)
+Note: for --name, athlete's names must be exactly as they appear in the database
