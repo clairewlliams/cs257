@@ -1,0 +1,39 @@
+# Claire Williams and Luisa Escosteguy
+
+DATASET:
+    We are going to use Video Games Sales with Ratings. 
+    This dataset contains a list of video games with sales greater than 100,000 copies. 
+    It includes information such as game name, platform, release year, genre, publisher, 
+    and various statistics about sales. 
+
+    Available at: https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings 
+                  Video_Games_Sales_as_at_22_Dec_2016.csv
+
+STORIES:
+
+    STORY: A gaming enthusiast can get a list of their favorite games, sorted by global sales 
+    or sales in North America, the European Union, or Japan. They can constrain their sort by 
+    their favorite publisher, platform, or genre so they can get game recommendations. 
+    IMPLEMENTATION: On the home page, the gamer can apply filters available on a side menu to 
+    redisplay the data with their desired constraints. This would be similar to filters when online 
+    shopping. 
+
+    STORY: A Nintendo enthusiast can find Nintendo’s top games by sales and see a plethora of data, 
+    displayed visually and textually. This data would include (but is not limited to): Most frequently 
+    used consoles and genres, how much of Nintendo’s sales are accounted for by each game, etc. 
+    IMPLEMENTATION: The user can click the publisher’s name (in this case Nintendo), and be taken to 
+    a page dedicated to Nintendo, displaying various data about Nintendo. They can also use a 
+    navigation bar at the top of the page to navigate to a page of publishers and find Nintendo 
+    that way. 
+
+    STORY: A mother looking to buy her child a new Wii game for Christmas can find information about
+     various Wii games. She can see the top games by sales, the top genres of Wii games, etc. 
+    IMPLEMENTATION: The user can click the platform’s name (in this case Wii) in the main table.
+     They can also use a navigation bar at the top of the page to navigate to a page of platforms 
+     and find Wii that way. 
+
+    STORY: A sports fan looking to buy a new sports game can see top games by the genre sports, 
+    and insights about sports games. 
+    IMPLEMENTATION: The user can click the genre’s name (in this case Sports) in the main table. 
+    They can also use a navigation bar at the top of the page to navigate to a page of genres and 
+    find Sport that way. 

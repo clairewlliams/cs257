@@ -1,0 +1,14 @@
+#Claire Williams and Luisa Escosteguy
+
+usage: 
+    python3 books.py [--book S] [--author S] [--publication year year]
+    python3 books.py [--help]
+
+Process books.csv using a keyword from the title, an author, or a range of publication:
+
+--book, -b S                    print a list of books whose titles contain the string S
+--author, -a S                  print a list of authors whose names contain the string S
+--publication, -p year year     print a list of books published between the two years
+--help, -h                      show this help message and exit
+
+Note: Flags may be combined. 

@@ -1,0 +1,76 @@
+/* Claire Williams and Luisa Escosteguy */
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue";
+  background: #ffe88d;
+}
+
+header.masthead {
+  position: relative;
+  background-image: url("heading.jpg");
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+header.masthead h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+header.masthead h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.container-fluid {
+  margin-top: 4rem;
+}
+
+#title {
+  font-family: "Arial Black", sans-serif;
+  font-size: 4.5em;
+  letter-spacing: -1px;
+  background-color: black;
+  color: white;
+}
+
+a,
+.page-link {
+  color: #286dc0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #efefef;
+}
+
+#home,
+navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  font-weight: bolder;
+}
+
+small {
+  color: white;
+}
+
+#genres_checks,
+#publishers_checks {
+  padding-top: 15px;
+}
+
+.buttonHolder {
+  text-align: center;
+  padding-top: 15px;
+}

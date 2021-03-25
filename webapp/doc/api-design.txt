@@ -1,0 +1,48 @@
+# Claire Williams and Luisa Escosteguy
+
+REQUEST: /platforms
+RESPONSE: an alphabetized JSON list of strings, each of which is a platform.
+EXAMPLE: ["2600", "3DO", "3DS", ... ]
+
+REQUEST: /publishers
+RESPONSE: an alphabetized JSON list of strings, each of which is a publisher.
+EXAMPLE: ["10TACLE Studios", "1C Company", "20th Century Fox Video Games", ... ]
+
+REQUEST: /genres
+RESPONSE: an alphabetized JSON list of strings, each of which is a genre.
+EXAMPLE: ["Action", "Adventure", "Fighting", ... ]
+
+REQUEST: /categories
+RESPONSE: returns a JSON dictionary with the categorical entries and their values for the dataset. 
+EXAMPLE: 
+{
+   'platforms': ['Wii', 'PS2', 'GB', 'DS', 'X360'],
+   'genres': ['Action', 'Sports', 'Shooter', 'Role-Playing', 'Platform'],
+   'publishers': ['Electronic Arts', 'Activision', 'Ubisoft', 'Nintendo', 'Namco Bandai Games']
+}
+
+REQUEST: /games/?platform=platform&genre=genre&publisher=publisher&order_by=critic_score/user_score
+RESPONSE: a JSON list of dictionaries, each of which represents the games with the specified criteria.
+The parameters are optional and additive. The order_by parameter only accepts critic_score and user_score and defaults to global sales
+
+   name -- (string) the title of the game
+   global_sales -- (integer) number of global sales of the game
+   publisher -- (string) the publisher of the game
+   platform -- (string) the platform of the game
+   genre -- (string) genre of the game
+   year -- (integer) year of publication
+   na -- (integer) North American sales of the game
+   eu -- (integer) European sales of the game
+   jp -- (integer) Japanese sales of the game
+   user_score -- (decimal) user score of the game
+   critic_score --(decimal) critic score of the game
+EXAMPLES:
+   No GET parameter: /games/
+      [{"name": "Grand Theft Auto V", "global_sales": 21.04, "publisher": "Take-Two Interactive", "platform": "PS3", "genre": "Action", "year": 2013, "na": 7.02, "eu": 9.09, "jp": 0.98, "user_score": 8.2, "critic_score": 97}, 
+      {"name": "Wii Sports", "global_sales": 82.53, "publisher": "Nintendo", "platform": "Wii", "genre": "Sports", "year": 2006, "na": 41.36, "eu": 28.96, "jp": 3.77, "user_score": 8.0, "critic_score": 76}...]
+   One GET parameter: /games/?platform=PS3
+      [{"name": "Grand Theft Auto V", "global_sales": 21.04, "publisher": "Take-Two Interactive", "platform": "PS3", "genre": "Action", "year": 2013, "na": 7.02, "eu": 9.09, "jp": 0.98, "user_score": 8.2, "critic_score": 97}, 
+      {"name": "Call of Duty: Black Ops II", "global_sales": 13.79, "publisher": "Activision", "platform": "PS3", "genre": "Shooter", "year": 2012, "na": 4.99, "eu": 5.73, "jp": 0.65, "user_score": 5.3, "critic_score": 83}, ...]
+   Three GET parameter: /games/?platform=Wii&genre=Action&publisher=Nintendo
+      [{"name": "The Legend of Zelda: Twilight Princess", "sales": 7.15, "publisher": "Nintendo", "platform": "Wii", "genre": "Action", "year": 2006, "na": 3.74, "eu": 2.14, "jp": 0.6, "user_score": 9.0, "critic_score": 95}, 
+      {"name": "The Legend of Zelda: Skyward Sword", "sales": 3.95, "publisher": "Nintendo", "platform": "Wii", "genre": "Action", "year": 2011, "na": 2.03, "eu": 1.16, "jp": 0.37, "user_score": 8.0, "critic_score": 93}...]
